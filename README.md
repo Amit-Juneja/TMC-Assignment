@@ -10,4 +10,4 @@ npm run dev
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This project uses [`next/Image`](https://nextjs.org/docs/basic-features/font-optimization) for automatically optimising the image loads. The project is also made SEO friendly as it uses Next.js with mobile friendly & responsive design with provding alt text that will help the search engines understand the image content & improve accessibility
+This project uses [`next/Image`](https://nextjs.org/docs/pages/building-your-application/optimizing/images) for automatically optimising the image loads. The project is also made SEO friendly as it uses Next.js with mobile friendly & responsive design with provding alt text that will help the search engines understand the image content & improve accessibility
