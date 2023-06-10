@@ -2,7 +2,6 @@ import { Box, Typography } from "@mui/material";
 import Image from "next/image";
 import StreetSmartImage from "../public/street_smart_image.svg";
 import profileImage from "../public/profile_image.svg";
-import { profile } from "console";
 import Calendar from "../public/calendar.svg";
 import { CSSProperties } from "react";
 import Arrow from "../public/Arrow.svg";
@@ -49,80 +48,78 @@ export default function StreetSmart() {
         pt: 5,
       }}
     >
-      {profiles.map((profile) => {
+      {profiles.map((profile, key) => {
         return (
-          <>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              scrollSnapAlign: "start",
+              pl: 2.5,
+              pb: 2,
+            }}
+            key={key}
+          >
             <Box
               sx={{
                 display: "flex",
-                flexDirection: "column",
-                scrollSnapAlign: "start",
-                pl: 2.5,
+                width: "max-content",
+                alignItems: "center",
               }}
             >
+              <Image
+                src={StreetSmartImage}
+                alt="Street_Smart_Image"
+                style={{ width: "max-content" }}
+              />
               <Box
                 sx={{
                   display: "flex",
-                  width: "max-content",
-                  alignItems: "center",
+                  flexDirection: "column",
+                  pl: 1,
+                  pr: 6,
                 }}
               >
-                <Image
-                  src={StreetSmartImage}
-                  alt="Street_Smart_Image"
-                  style={{ width: "max-content" }}
-                />
+                <Typography>{profile.headerText}</Typography>
                 <Box
                   sx={{
                     display: "flex",
-                    flexDirection: "column",
-                    pl: 1,
-                    pr: 6,
+                    alignItems: "center",
                   }}
                 >
-                  <Typography>{profile.headerText}</Typography>
-                  <Box
-                    sx={{
-                      display: "flex",
-                      alignItems: "center",
-                    }}
-                  >
-                    <Image src={profileImage} alt="profile_image" />
-                    <Typography sx={nameStyle}>
-                      {profile.firstName} {profile.lastName}
-                    </Typography>
-                  </Box>
-                  <Box
-                    sx={{
-                      display: "flex",
-                      pt: 1.5,
-                      alignItems: "center",
-                    }}
-                  >
-                    <Image src={Calendar} alt="calendar" />
-                    <Typography sx={nameStyle}>
-                      {profile.publishDate}
-                    </Typography>
-                  </Box>
+                  <Image src={profileImage} alt="profile_image" />
+                  <Typography sx={nameStyle}>
+                    {profile.firstName} {profile.lastName}
+                  </Typography>
+                </Box>
+                <Box
+                  sx={{
+                    display: "flex",
+                    pt: 1.5,
+                    alignItems: "center",
+                  }}
+                >
+                  <Image src={Calendar} alt="calendar" />
+                  <Typography sx={nameStyle}>{profile.publishDate}</Typography>
                 </Box>
               </Box>
-              <Typography
-                sx={{
-                  fontFamily: "Matteo",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  fontSize: "14px",
-                  lineHeight: "160%",
-                  letterSpacing: "0.3px",
-                  color: "#000000",
-                  pb: 1.5,
-                }}
-              >
-                {profile.content}
-              </Typography>
-              <Image src={Arrow} alt="Arrow Image" />
             </Box>
-          </>
+            <Typography
+              sx={{
+                fontFamily: "Matteo",
+                fontStyle: "normal",
+                fontWeight: 400,
+                fontSize: "14px",
+                lineHeight: "160%",
+                letterSpacing: "0.3px",
+                color: "#000000",
+                pb: 1.5,
+              }}
+            >
+              {profile.content}
+            </Typography>
+            <Image src={Arrow} alt="Arrow Image" />
+          </Box>
         );
       })}
     </Box>

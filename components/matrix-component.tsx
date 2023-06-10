@@ -1,5 +1,5 @@
 import React, { CSSProperties } from "react";
-import { Box, Grid, Paper, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Success from "../public/success.svg";
 import Image from "next/image";
 
@@ -146,7 +146,7 @@ export default function MatrixComponent() {
         </Box>
         <Typography sx={headingsx}>Privilege Credits</Typography>
       </Box>
-      {rows.map((row) => {
+      {rows.map((row, key) => {
         return (
           <Box
             sx={{
@@ -155,10 +155,12 @@ export default function MatrixComponent() {
               alignItems: "center",
               mb: 2,
             }}
+            key={key}
           >
             <Typography sx={textsx}>{row.text}</Typography>
             {row.firstColumn ? (
               <Image
+                key={key}
                 src={Success}
                 alt="Success logo"
                 style={{ width: "50px" }}

@@ -29,32 +29,30 @@ export default function StarterCollection() {
     alignItems: "center",
     textAlign: "center",
     color: "#051462",
-    paddingLeft: 2,
-    paddingRight: 2,
+    paddingLeft: 8,
+    paddingRight: 8,
   };
   return (
-    <>
-      <Box
-        sx={{
-          pt: 8,
-          background: "#FFFBF1",
-          alignItems: "center",
-          display: "flex",
-          flexDirection: "column",
-          gap: "40px",
-        }}
-      >
-        <Typography sx={starterStyle}>
-          Get access to our Starter Collection by signing up for FREE
-        </Typography>
-        <CollectionCard />
-        <Typography sx={signupStyle}>
-          Sign up now to access the Starter Collection
-        </Typography>
-        <CreditCard />
-        <VideoCard />
-        <PremiumNewsLetters />
-      </Box>
-    </>
+    <Box
+      sx={{
+        pt: 8,
+        background: "#FFFBF1",
+        alignItems: "center",
+        display: "flex",
+        flexDirection: "column",
+        gap: "40px",
+      }}
+    >
+      <Typography sx={starterStyle}>
+        Get access to our Starter Collection by signing up for FREE
+      </Typography>
+      <CollectionCard />
+      <Typography sx={signupStyle}>
+        Sign up now to access the Starter Collection
+      </Typography>
+      <CreditCard />
+      <VideoCard />
+      <PremiumNewsLetters />
+    </Box>
   );
 }

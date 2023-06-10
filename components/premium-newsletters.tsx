@@ -40,6 +40,8 @@ export default function PremiumNewsLetters() {
           letterSpacing: "0.3px",
           color: "#000000",
           pt: 2,
+          pl: 9,
+          pr: 9,
         }}
       >
         Sharp analysis by our writers and expert contributors, from big tech to

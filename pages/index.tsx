@@ -1,4 +1,3 @@
-import useIsMobile from "../utils/useIsMobile";
 import NavBar from "@/components/nav/nav-bar";
 import CustomHead from "@/components/custom-head";
 import Footer from "@/components/footer";
@@ -10,18 +9,15 @@ import WhyChooseTMC from "@/components/why-tmc";
 import StarterCollection from "@/components/starter-collection";
 
 export default function Home() {
-  const isMobile = useIsMobile();
   return (
-    { isMobile } && (
-      <Box sx={{ position: "relative" }}>
-        <CustomHead description={BASE_TITLE} title={BASE_TITLE} />
-        <NavBar />
-        <Context />
-        <Journalism />
-        <WhyChooseTMC />
-        <StarterCollection />
-        <Footer />
-      </Box>
-    )
+    <Box sx={{ position: "relative" }}>
+      <CustomHead description={BASE_TITLE} title={BASE_TITLE} />
+      <NavBar />
+      <Context />
+      <Journalism />
+      <WhyChooseTMC />
+      <StarterCollection />
+      <Footer />
+    </Box>
   );
 }

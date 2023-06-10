@@ -89,83 +89,83 @@ export default function CollectionCard() {
     >
       {icons.map((icon, key) => {
         return (
-          <>
+          <Box
+            key={key}
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              scrollSnapAlign: "start",
+              pl: 2.5,
+              pb: 2,
+            }}
+          >
             <Box
               sx={{
                 display: "flex",
-                flexDirection: "column",
-                scrollSnapAlign: "start",
-                pl: 2.5,
+                justifyContent: "space-between",
+                alignItems: "self-start",
               }}
             >
-              <Box
-                sx={{
-                  display: "flex",
-                  justifyContent: "space-between",
-                  alignItems: "self-start",
-                }}
-              >
-                <Typography sx={{ ...labelStyle, color: icon.labelColor }}>
-                  {icon.name}
-                </Typography>
-                <Image
-                  src={SaveIcon}
-                  alt="Save Icon"
-                  width={saveIconSize}
-                  height={saveIconSize}
-                />
-              </Box>
+              <Typography sx={{ ...labelStyle, color: icon.labelColor }}>
+                {icon.name}
+              </Typography>
               <Image
-                src={icon.image}
-                alt="collection_image"
+                src={SaveIcon}
+                alt="Save Icon"
+                width={saveIconSize}
+                height={saveIconSize}
+              />
+            </Box>
+            <Image
+              src={icon.image}
+              alt="collection_image"
+              style={{ width: "max-content" }}
+            />
+            <Typography sx={headerStyle}>{icon.headerText}</Typography>
+            <Typography sx={contentStyle}>{icon.contentText}</Typography>
+            <Box
+              sx={{
+                border: "1px solid #907CFF",
+                mt: 1,
+                width: "60px",
+                height: 0,
+              }}
+            />
+            <Box
+              sx={{
+                display: "flex",
+                alignItems: "center",
+                pt: 2,
+              }}
+            >
+              <Image
+                src={icon.profileImage}
+                alt="profile_image"
                 style={{ width: "max-content" }}
               />
-              <Typography sx={headerStyle}>{icon.headerText}</Typography>
-              <Typography sx={contentStyle}>{icon.contentText}</Typography>
-              <Box
-                sx={{
-                  border: "1px solid #907CFF",
-                  mt: 1,
-                  width: "60px",
-                  height: 0,
-                }}
-              />
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  pt: 2,
-                }}
-              >
-                <Image
-                  src={icon.profileImage}
-                  alt="profile_image"
-                  style={{ width: "max-content" }}
-                />
-                <Typography sx={nameStyle}>
-                  {icon.firstName} {icon.lastName}
-                </Typography>
-                <Image
-                  src={Plus}
-                  alt="plus_image"
-                  style={{ width: "max-content" }}
-                />
-              </Box>
-              <Typography
-                sx={{
-                  fontFamily: "Matteo",
-                  fontStyle: "normal",
-                  fontWeight: "400",
-                  fontSize: "12px",
-                  lineHeight: "14px",
-                  color: "#292929",
-                  pt: 1,
-                }}
-              >
-                10 July 2020
+              <Typography sx={nameStyle}>
+                {icon.firstName} {icon.lastName}
               </Typography>
+              <Image
+                src={Plus}
+                alt="plus_image"
+                style={{ width: "max-content" }}
+              />
             </Box>
-          </>
+            <Typography
+              sx={{
+                fontFamily: "Matteo",
+                fontStyle: "normal",
+                fontWeight: "400",
+                fontSize: "12px",
+                lineHeight: "14px",
+                color: "#292929",
+                pt: 1,
+              }}
+            >
+              10 July 2020
+            </Typography>
+          </Box>
         );
       })}
     </Box>

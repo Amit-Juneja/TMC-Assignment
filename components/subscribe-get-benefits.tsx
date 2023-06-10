@@ -60,9 +60,7 @@ export default function SubscribeGetBenefits() {
           textAlign: "center",
           letterSpacing: "0.3px",
           color: "#000000",
-          pt: 1,
-          pl: 2,
-          pb: 2.5,
+          p: "8px 16px 20px 16px",
         }}
       >
         Subscribe and get full access to all stories across our three pillars:
@@ -126,9 +124,12 @@ export default function SubscribeGetBenefits() {
         >
           {icons.map((icon, key) => {
             return (
-              <>
-                <Image src={icon} alt={icon} style={{ paddingRight: "36px" }} />
-              </>
+              <Image
+                key={key}
+                src={icon}
+                alt={icon}
+                style={{ paddingRight: "36px" }}
+              />
             );
           })}
         </Box>

@@ -8,7 +8,6 @@ import SearchIcon from "../../public/Search_icon.svg";
 import TMCButton from "../common/tmc-button";
 
 export default function NavBar(): ReactElement {
-  const tmcIconSize = 100;
   const searchIconSize = 20;
   return (
     <AppBar
@@ -16,7 +15,7 @@ export default function NavBar(): ReactElement {
       sx={{
         alignItems: "center",
         boxShadow: "0",
-        padding: "0px 12px 0px 18px",
+        padding: "10px 12px 10px 18px",
       }}
     >
       <Box
@@ -33,12 +32,7 @@ export default function NavBar(): ReactElement {
           }}
         >
           <DesktopNavMenuButton />
-          <Image
-            src={TMCLogo}
-            alt="The Morning Context"
-            width={tmcIconSize}
-            height={tmcIconSize}
-          />
+          <Image src={TMCLogo} alt="The Morning Context" />
         </Box>
         <Box
           sx={{

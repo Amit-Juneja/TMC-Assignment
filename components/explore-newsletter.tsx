@@ -1,4 +1,4 @@
-import { Box, Button, Grid, Typography } from "@mui/material";
+import { Box, Button, Typography } from "@mui/material";
 import { CSSProperties } from "react";
 import TMCButton from "./common/tmc-button";
 export default function ExploreNewsletter() {
@@ -19,6 +19,7 @@ export default function ExploreNewsletter() {
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
+        pt: 3,
       }}
     >
       <Typography
@@ -29,6 +30,7 @@ export default function ExploreNewsletter() {
           color: "#051462",
           fontFamily: "Abril Fatface",
           textAlign: "center",
+          pb: 2,
         }}
       >
         Explore newsletters on

@@ -1,6 +1,4 @@
 import { Box, Typography } from "@mui/material";
-import styles from "../styles/Home.module.css";
-import TMCButton from "./common/tmc-button";
 import { CSSProperties } from "react";
 
 export default function Journalism() {
@@ -20,23 +18,23 @@ export default function Journalism() {
     fontFamily: "Merriweather",
     textAlign: "center",
     paddingTop: 2,
+    paddingLeft: 7,
+    paddingRight: 7,
   };
   return (
-    <>
-      <Box
-        sx={{
-          height: "100%",
-          width: "100%",
-          position: "relative",
-          pt: 12,
-        }}
-      >
-        <Typography sx={journalismStyle}>Our journalism</Typography>
-        <Typography sx={ourMissionStyle}>
-          Our mission is to build an independent credible media company, which
-          tells stories that matter
-        </Typography>
-      </Box>
-    </>
+    <Box
+      sx={{
+        height: "100%",
+        width: "100%",
+        position: "relative",
+        pt: 12,
+      }}
+    >
+      <Typography sx={journalismStyle}>Our journalism</Typography>
+      <Typography sx={ourMissionStyle}>
+        Our mission is to build an independent credible media company, which
+        tells stories that matter
+      </Typography>
+    </Box>
   );
 }

@@ -12,18 +12,17 @@ export default function WhyChooseTMC() {
     textAlign: "center",
   };
   return (
-    <>
-      <Box
-        sx={{
-          height: "100%",
-          width: "100%",
-          position: "relative",
-          pt: 10,
-        }}
-      >
-        <Typography sx={whyTMCStyle}>Why choose TMC?</Typography>
-        <TMCCard />
-      </Box>
-    </>
+    <Box
+      sx={{
+        height: "100%",
+        width: "100%",
+        position: "relative",
+        pt: 10,
+        pb: 10,
+      }}
+    >
+      <Typography sx={whyTMCStyle}>Why choose TMC?</Typography>
+      <TMCCard />
+    </Box>
   );
 }

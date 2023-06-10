@@ -8,24 +8,28 @@ import Image from "next/image";
 
 const icons = [
   {
+    id: 1,
     image: Information,
     headerText: "Information and analysis you won't find anywhere else",
     contentText:
       "We publish the best writing in India across three categories—internet, business and chaos.",
   },
   {
+    id: 2,
     image: Journalism,
     headerText: "Independent and unbiased journalism",
     contentText:
       "We are building a credible media company which tells stories that matter. Paid for by the readers.",
   },
   {
+    id: 3,
     image: Newsletter,
     headerText: "Premium newsletters",
     contentText:
       "Read what is new in big tech, corporate governance and the world, in general from some of the top writers in the country.",
   },
   {
+    id: 4,
     image: Dialogue,
     headerText: "TMC Dialogues",
     contentText: "Be a part of exclusive The Morning Context community.",
@@ -58,36 +62,35 @@ export default function TMCCard() {
     <>
       {icons.map((icon, key) => {
         return (
-          <>
+          <Box
+            sx={{
+              position: "relative",
+              background: "#F3F5FF",
+              gap: "12px",
+              p: "16px",
+              m: "16px",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-start",
+            }}
+            key={key}
+          >
             <Box
               sx={{
-                position: "relative",
-                background: "#F3F5FF",
-                gap: "12px",
-                p: "16px",
-                m: "16px",
                 display: "flex",
-                flexDirection: "column",
-                alignItems: "flex-start",
               }}
             >
-              <Box
-                sx={{
-                  display: "flex",
-                }}
-              >
-                <Image
-                  src={icon.image}
-                  alt="tmc_image"
-                  width={iconSize}
-                  height={iconSize}
-                  style={{ marginRight: "10px", marginTop: "8px" }}
-                />
-                <Typography sx={headingStyle}>{icon.headerText}</Typography>
-              </Box>
-              <Typography sx={contentStyle}>{icon.contentText}</Typography>
+              <Image
+                src={icon.image}
+                alt="tmc_image"
+                width={iconSize}
+                height={iconSize}
+                style={{ marginRight: "10px", marginTop: "8px" }}
+              />
+              <Typography sx={headingStyle}>{icon.headerText}</Typography>
             </Box>
-          </>
+            <Typography sx={contentStyle}>{icon.contentText}</Typography>
+          </Box>
         );
       })}
     </>
